@@ -1,3 +1,8 @@
+/*
+Scanner is part of the bufio package. It is useful for stepping through files at specific delimiters. Commonly, the newline character is used as the delimiter to break up a file by lines. In a CSV file, commas would be the delimiter. The os.File can be wrapped in a bufio.Scanner just like a buffered reader. We call Scan() to read up to the next delimiter, and then use Text() or Bytes() to get the data that was read.
+
+The delimiter is not just a simple byte or character. There is actually a special function you have to implement that will determine where the next delimiter is, how far forward to advance the pointer, and what data to return. If no custom SplitFunc is provided, it defaults to ScanLines which will split at every newline character. Other split functions included in bufio are ScanRunes, and ScanWords.
+*/
 package main
 
 import (
