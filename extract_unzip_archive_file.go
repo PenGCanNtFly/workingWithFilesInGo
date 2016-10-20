@@ -1,3 +1,6 @@
+/*
+*从zip中提取
+ */
 package main
 
 import (
